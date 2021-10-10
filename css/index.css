@@ -1,15 +1,16 @@
    body {
             margin: 0px;
             padding: 0px;
-        
+
         }
-       
+
         .header {
             height: 80px;
             width: 100%;
             border: 1px solid #45b4d6;
-            background-color:#79a3f0;
+            background-color: #79a3f0;
             display: flex;
+            align-items: center;
 
         }
 
@@ -22,7 +23,7 @@
             height: 600px;
             width: 100%;
             border: 1px solid brown;
-            background-color:cornflowerblue;
+            background-color: cornflowerblue;
         }
 
         @keyframes mymove {
@@ -36,6 +37,8 @@
         }
 
         .header_img {
+            height: 50px;
+            width: 50px;
             animation-name: ceshi;
             position: relative;
             animation-iteration-count: 1;
@@ -43,6 +46,7 @@
             animation-direction: alternate;
             animation-delay: 1s;
             animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
         }
 
         @keyframes ceshi {
@@ -57,7 +61,7 @@
                 opacity: 1;
                 transform: rotate(360deg);
                 border-radius: 25px;
-                left: 0px;
+                left: 50px;
             }
         }
 
@@ -107,23 +111,51 @@
             }
 
         }
-       
 
-        .footer{
+
+        .footer {
             height: 50px;
             width: 100%;
-            background-color:#2b66d3;
-           
+            background-color: #2b66d3;
+
         }
-       
-        .wrap-out{
-    animation-name: submit;
-    animation-direction:  alternate;
-    animation-timing-function:ease;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-@keyframes submit{
-    from{transform: translateY(0);}
-    to{transform: translateY(-900px);}
-}
+
+        .footer button {
+            height: 30px;
+            width: 50px;
+
+        }
+
+        .wrap-out {
+            animation-name: submit;
+            animation-direction: alternate;
+            animation-timing-function: ease;
+            animation-duration: 3s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes submit {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-900px);
+            }
+        }
+
+        .flip {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+
+        .flip-in {
+            background-image: url(./img/beijing.png);
+            height: 100%;
+            transition: 0.8s;
+        }
+
+        .flip:hover .flip-in {
+            transform: rotateY(180deg);
+        }
