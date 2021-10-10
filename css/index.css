@@ -1,9 +1,7 @@
    body {
             margin: 0px;
             padding: 0px;
-
         }
-
         .header {
             height: 80px;
             width: 100%;
@@ -11,31 +9,25 @@
             background-color: #79a3f0;
             display: flex;
             align-items: center;
-
         }
-
         h2 {
             position: relative;
             animation: mymove 5s infinite;
         }
-
         .main_text {
             height: 600px;
             width: 100%;
             border: 1px solid brown;
             background-color: cornflowerblue;
         }
-
         @keyframes mymove {
             from {
                 left: 0px;
             }
-
             to {
                 left: 500px;
             }
         }
-
         .header_img {
             height: 50px;
             width: 50px;
@@ -48,7 +40,6 @@
             animation-timing-function: ease-in;
             animation-fill-mode: forwards;
         }
-
         @keyframes ceshi {
             from {
                 opacity: 0.1;
@@ -56,7 +47,6 @@
                 border-radius: 0px;
                 left: 0px;
             }
-
             to {
                 opacity: 1;
                 transform: rotate(360deg);
@@ -64,7 +54,6 @@
                 left: 50px;
             }
         }
-
         .text_title {
             height: 100px;
             width: 300px;
@@ -80,7 +69,6 @@
             animation-delay: 2s;
             animation-iteration-count: infinite;
         }
-
         @keyframes example {
             0% {
                 background-color: #40ebda;
@@ -88,44 +76,34 @@
                 top: 0px;
                 opacity: 0
             }
-
             25% {
                 background-color: #1fbeaf;
                 left: 0px;
                 top: 200px;
                 opacity: 0.5;
             }
-
             75% {
                 background-color: #42dbdb;
                 left: 0px;
                 top: 200px;
                 opacity: 0.8;
             }
-
             100% {
                 background-color: #1fbeaf;
                 left: 0px;
                 top: 200px;
                 opacity: 1;
             }
-
         }
-
-
         .footer {
             height: 50px;
             width: 100%;
             background-color: #2b66d3;
-
         }
-
         .footer button {
             height: 30px;
             width: 50px;
-
         }
-
         .wrap-out {
             animation-name: submit;
             animation-direction: alternate;
@@ -133,29 +111,24 @@
             animation-duration: 3s;
             animation-fill-mode: forwards;
         }
-
         @keyframes submit {
             from {
                 transform: translateY(0);
             }
-
             to {
                 transform: translateY(-900px);
             }
         }
-
         .flip {
             width: 200px;
             height: 200px;
             cursor: pointer;
         }
-
         .flip-in {
-            background-image: url(./img/beijing.png);
+          background-color: #3c70d1;
             height: 100%;
             transition: 0.8s;
         }
-
         .flip:hover .flip-in {
             transform: rotateY(180deg);
-        }
+        }    
