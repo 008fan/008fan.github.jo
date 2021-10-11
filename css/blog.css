@@ -89,10 +89,10 @@ body{
    
 }
 .headerText span{
-    color:#7595cf;
-    overflow: hidden;
+    color:#7595cf; 
 }
 .text-exceeded{
+    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
