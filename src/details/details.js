@@ -25,12 +25,7 @@ class Url {
     }
 }
 
-var el=document.querySelector('article');
-var textContent= el.textContent;
-console.log(textContent);
-let md=new Markdown(el.textContent);
-let res=md.parse();
-el.innerHTML=res;
+
 
 //作业一：
 var url = new Url('localhost:8080?type=2&id=1&name=xiaoming');
@@ -61,5 +56,9 @@ for (let i = 0; i < Article.length; i++) {
         document.querySelector('.sculpture-button').innerHTML = Article[i].article;
     }
 }
-
+var el=document.querySelector('.sculpture-button');
+var content= el.textContent;
+let md=new Markdown(content);
+let res=md.parse();
+el.innerHTML=res;
 

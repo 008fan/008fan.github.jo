@@ -101,12 +101,12 @@ export default class Markdown{
     //     return res;
 //     }
 // }
-var el=document.querySelector('article');
-var textContent= el.textContent;
-console.log(textContent);
-let md=new Markdown(el.textContent);
-let res=md.parse();
-el.innerHTML=res;
+// var el=document.querySelector('article');
+// var textContent= el.textContent;
+// console.log(textContent);
+// let md=new Markdown(el.textContent);
+// let res=md.parse();
+// el.innerHTML=res;
 
 
    //作业二：
