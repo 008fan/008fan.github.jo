@@ -50,8 +50,8 @@ console.log(url2.parse());
 var type = (window.location.search).substring(4);
 console.log(type);
 for (let i = 0; i < Article.length; i++) {
-    if (Article[0].id == type) {
-        document.querySelector('.sculpture-button').innerHTML = Article[0].article;
+    if (Article[i].id == type) {
+        document.querySelector('.sculpture-button').innerHTML = Article[i].article;
     }
 }
 

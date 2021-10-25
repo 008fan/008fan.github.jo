@@ -3,132 +3,128 @@
     <article>
         本周的学习内容
 
-######  正则表达式
-
-正则是用来匹配字符串的 ，只能对字符有用 。
-
-其中有一些特殊字符  Eg：/  \  () [ ] { }  \n   +  *  . 匹配回车以外的所有字符      [^\n]代表非
-
-正则.test('string')   //检查元素是否符合正则表达式的规则，如果符合返回true，否则返回false
-
-#####  Promise
-
-promise 的作用是为了解决在开发中遇到的地狱回调问题
-
-```js
-setTimeout(function(){
-    setTimeout(function(){
-       setTimeout(function(){
-           
-       },2000) 
-    },2000)
-},2000)
-```
-
-```js
-//基本语法
-//resolve:成功   reject 失败 这俩入参的都是方法，回调函数  
-let list=new Promise((resolve,reject)=>{
-    ajax({
-        url:'',
-        success:function(res){
-            resolve(res)
-        }
-    })
-})
-//如果resolve方法执行，会走到then方法
-list.then(res=>{
-    console.log(res);
-})
-//如果reject方法执行，会走到catch方法中
-list.catch(err=>{
-    console.log(err)
-})
-```
-
-#### async await
-
-```js
-await 方法必须和 async方法结合使用，不能单独使用await
-```
-
-#### 类里面的方法强关联（get）,数据劫持
-
-```html
-他的底层是 Object.defineProperty()
-```
-
-##### 默认赋值   
-
-##### 解构赋值
-
-```js 
-let data={
-    username:'xiaoming',
-    age:18 
-}
-let {username,age}=data;
-//赋值
-let username=data.username;
-let age=data.age;
-//解构赋值和赋值的效果是相同的，但是解构赋值，比较优雅；
-```
-
-#### 文档碎片（fragment）的作用？
-
-var fragment=document.createDocumentFragment();  //创建
-
-文档碎片：
-
-//重绘  回流；
-
- ```js
-<!-- for(let i=0;i<1000;i++){
-		fragment.appendChild(cloneNode);
-}
-document.querySelector().appendChild(fragment);
- ```
-
-###### 类的静态属性和静态方法的定义及使用用法？
-
-````js
-Js中万物接对象(Ogject,{},function,class,Dom...);
-对象就有key 和value
-如果value是属性，就叫静态属性；
-如果value是方法，就叫静态方法；
-
-class类中的静态方法表达方式
-class A{
-    constructor(){
+        ######  正则表达式
         
-    }
-    static fn(){
-        在类的方法中加上关键字 static 就叫静态方法 
-    }
-}
-
-Tip:
-类的静态方法中，this指向的不是实例；
-因为静态方法不需要实例化；
-````
-
-###### 封装方法的原则？
-
-````html
-解耦 一个方法只能做一个功能
-方法入参中必传项参数放前面，非必传项靠后；
-````
-
-###### 数据中的id是标识，通常用来给服务端交互，不指向客户端
-
-###### 数据驱动页面，不能用页面状态来修改js 逻辑
-
-##### Dom.remove方法虽然可以移除页面中的元素，但是他不让变量的值消失；
-
-#### 闭包的应用场
-
-如果有开关flag，可以把flag用闭包封装起来，避免全局变量的污染
-
-template不能渲染到页面，它是用来克隆的模板，获取他里面的元素用content ; -->
+        正则是用来匹配字符串的 ，只能对字符有用 。
+        
+        其中有一些特殊字符  Eg：/  \  () [ ] { }  \n   +  *  . 匹配回车以外的所有字符      [^\n]代表非
+        
+        正则.test('string')   //检查元素是否符合正则表达式的规则，如果符合返回true，否则返回false
+        
+        #####  Promise
+        
+        promise 的作用是为了解决在开发中遇到的地狱回调问题
+        
+        ```js
+        setTimeout(function(){
+            setTimeout(function(){
+               setTimeout(function(){
+                   
+               },2000) 
+            },2000)
+        },2000)
+        ```
+        
+        ```js
+        //基本语法
+        //resolve:成功   reject 失败 这俩入参的都是方法，回调函数  
+        let list=new Promise((resolve,reject)=>{
+            ajax({
+                url:'',
+                success:function(res){
+                    resolve(res)
+                }
+            })
+        })
+        //如果resolve方法执行，会走到then方法
+        list.then(res=>{
+            console.log(res);
+        })
+        //如果reject方法执行，会走到catch方法中
+        list.catch(err=>{
+            console.log(err)
+        })
+        ```
+        
+        #### async await
+        
+        - await 方法必须和 async方法结合使用，不能单独使用await
+        
+        #### 类里面的方法强关联（get）,数据劫持
+        
+        - 他的底层是 Object.defineProperty()
+        
+        ##### 默认赋值   
+        
+        ##### 解构赋值
+        
+        ```js 
+        let data={
+            username:'xiaoming',
+            age:18 
+        }
+        let {username,age}=data;
+        //赋值
+        let username=data.username;
+        let age=data.age;
+        //解构赋值和赋值的效果是相同的，但是解构赋值，比较优雅；
+        ```
+        
+        #### 文档碎片（fragment）的作用？
+        
+        var fragment=document.createDocumentFragment();  //创建
+        
+        文档碎片：
+        
+        //重绘  回流；
+        
+        ```js
+       // for(let i=0;i小于1000;i++){
+                fragment.appendChild(cloneNode);
+        }
+        document.querySelector('.leige').appendChild(fragment);
+        ```
+        
+        ###### 类的静态属性和静态方法的定义及使用用法？
+        
+        ```js
+        //Js中万物接对象(Ogject,{},function,class,Dom...);
+        //对象就有key 和value
+        //如果value是属性，就叫静态属性；
+        //如果value是方法，就叫静态方法；
+        
+        //class类中的静态方法表达方式
+        class A{
+            constructor(){
+                
+            }
+            static fn(){
+                //在类的方法中加上关键字 static 就叫静态方法
+            }
+        }
+        
+        //Tip:
+        //类的静态方法中，this指向的不是实例；
+        //因为静态方法不需要实例化；
+        ```
+        
+        ###### 封装方法的原则？
+        
+        - 解耦 一个方法只能做一个功能
+          方法入参中必传项参数放前面，非必传项靠后；
+        
+        ###### 数据中的id是标识，通常用来给服务端交互，不指向客户端
+        
+        ###### 数据驱动页面，不能用页面状态来修改js 逻辑
+        
+        ##### Dom.remove方法虽然可以移除页面中的元素，但是他不让变量的值消失；
+        
+        #### 闭包的应用场
+        
+        如果有开关flag，可以把flag用闭包封装起来，避免全局变量的污染
+        
+        template不能渲染到页面，它是用来克隆的模板，获取他里面的元素用content
+        
+        
     </article>
 </template>
