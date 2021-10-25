@@ -1,0 +1,33 @@
+div {
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.move {
+  animation: example 2s forwards;
+}
+@keyframes example {
+  from {
+    background-color: blue;
+    transform: translateX(-1000px);
+  }
+  to {
+    background-color: blueviolet;
+    transform: translateX(500px);
+  }
+}
+.opicity {
+  animation: opiexample 2s forwards;
+}
+@keyframes opiexample {
+  from {
+    background-color: #4b6ee0;
+    opacity: 0.1;
+  }
+  to {
+    background-color: #4b6ee0;
+    opacity: 1;
+  }
+}
+

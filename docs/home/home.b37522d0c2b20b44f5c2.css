@@ -1,0 +1,18 @@
+div {
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+.move {
+  animation: example 1s;
+}
+@keyframes example {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: blueviolet;
+  }
+}
+

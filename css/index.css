@@ -31,6 +31,9 @@
         .header_img {
             height: 50px;
             width: 50px;
+           
+        }
+        .move{
             animation-name: ceshi;
             position: relative;
             animation-iteration-count: 1;
