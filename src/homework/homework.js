@@ -58,7 +58,7 @@
 // let res = md.parseHtml();
 //     //输出html
 
-class Markdown{
+export default class Markdown{
     constructor(text){
         this.text=text;
     }
