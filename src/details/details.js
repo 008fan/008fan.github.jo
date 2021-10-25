@@ -1,5 +1,5 @@
 import Article from "../article_title"
-
+import Markdown from "../homework/homework"
 class Url {
     constructor(props) {
         this.content = props;
@@ -24,6 +24,13 @@ class Url {
         return arr.join('&')
     }
 }
+
+var el=document.querySelector('article');
+var textContent= el.textContent;
+console.log(textContent);
+let md=new Markdown(el.textContent);
+let res=md.parse();
+el.innerHTML=res;
 
 //作业一：
 var url = new Url('localhost:8080?type=2&id=1&name=xiaoming');
